@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Read the clipboard from stdin so in be piped in.
+if [ $(command -v xsel) ]; then
+	xsel --clipboard
+elif [ $(command -v pbcopy) ]; then
+	pbcopy
+else
+	exit 1
+fi
+

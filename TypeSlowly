@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Types $1
+
+sleep 0.3
+if [ $(command -v xdotool) ]; then
+    nLetter=${#1}
+    i=0
+    while [ "$i" -lt "$nLetter" ]
+      do
+        sleep 0.01
+        xdotool type "${1:$i:1}"
+        (( i += 1 ))
+      done
+elif [ $(command -v osascript) ]; then
+    osascript -e "tell app \"System Events\" to keystroke \"$1\""
+else
+    exit 1
+fi
