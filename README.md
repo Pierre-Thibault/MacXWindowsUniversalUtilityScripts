@@ -34,10 +34,6 @@ Simulates key strokes.
 
 Python needs to be in `$PATH`. Either Python 2 or 3. macOS or XWindows.
 
-## Installation
-
-Put these scripts somewhere in your `$PATH`.
-
 ### macOS
 
 No other requirement.
@@ -46,3 +42,7 @@ No other requirement.
 
 - xdotool
 - xsel
+
+## Installation
+
+Put these scripts somewhere in your `$PATH`.
